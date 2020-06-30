@@ -37,6 +37,11 @@ function App() {
               able to edit their menus.
             </p>
           </Route>
+          <Route path="/aboutUs">
+            <h1>
+              this will hopefully be where i put the about us page.
+            </h1>
+          </Route>
           <Route exact path="/">
             <h1>Welcome to Our Website!</h1>
           </Route>
