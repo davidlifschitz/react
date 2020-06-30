@@ -1,23 +1,22 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 import Item from './Item'
-function Section(props)
-{
-    let {name, items} = props
-    console.log(name,items)
+function Section(props) {
+    let { name, items } = props
+    console.log(name, items)
     return (
-        <div className = "menu-section">
-            <Fragment>
+        <Fragment>
             <h2>{props.name.toUpperCase()}</h2>
-            {items.map((item,index) => 
-            {
-                return (<Item
-                key={index}
-                item = {item} />)
-            })}
+            <div className="menu-section">
+
+                {items.map((item, index) => {
+                    return (<Item
+                        key={index}
+                        item={item} />)
+                })}
+            </div>
         </Fragment>
-        </div>
-        
-    )    
+
+    )
 }
 
 

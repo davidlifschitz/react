@@ -1,7 +1,12 @@
 import React from 'react';
-import menu from './components/menu/index'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route 
+} from "react-router-dom"
+import Navbar from './components/common/Navbar'
 import './App.css';
-import Menu from './components/menu/index';
+import Menu from './components/menu';
 {
 {/* <img src={logo} className="App-logo" alt="logo" />
         <Message messageObject  = {messageObject}/>
@@ -20,12 +25,24 @@ function App() {
   // messageObject.message = "this is text"  
   // console.log(messageObject)
   return (
-    <div className="App"> 
-      <header>
-        <Menu />
-      </header>
-    </div>
-    
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route path="/menu">
+            <Menu />
+          </Route>
+          <Route path="/edit">
+            <p>This is where restaurant owners will be 
+              able to edit their menus.
+            </p>
+          </Route>
+          <Route exact path="/">
+            <h1>Welcome to Our Website!</h1>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

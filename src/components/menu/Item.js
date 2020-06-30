@@ -1,16 +1,15 @@
 import React, { Fragment } from 'react'
 
-function Item(props)
-{
-    let {item } = props
+function Item(props) {
+    let { item } = props
     return (
-        <div className= "menu-item">
-        <Fragment>
-            <h3>{props.name}</h3>
-            <p>{props.price}</p>
-        </Fragment>
+        <div className="menu-item">
+
+            <h3>{item.name}</h3>
+            <p>{item.price}</p>
+
         </div>
-        
+
     )
 }
 

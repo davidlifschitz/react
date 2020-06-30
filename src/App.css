@@ -27,7 +27,11 @@
 .App-link {
   color: #61dafb;
 }
-
+body 
+{
+    background-color: #272262;
+    color: white;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +39,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+li > a {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+}
+li > a.active {
+  text-decoration: underline;
+  color: #ff216e;
 }
