@@ -11,7 +11,12 @@ class Message extends Component
         let {messageObject} = this.props
         console.log(this.props)
         // return <p style={{color: color}}> {message}</p>
-        return <div><p>Hello</p><p style={{color:messageObject.color}}>{messageObject.message}</p></div>
+        return <div>
+            <p>Hello</p>
+            <p style={{ color: messageObject.color }}>
+                {messageObject.message
+                }</p>
+            </div>
     }
     
 }

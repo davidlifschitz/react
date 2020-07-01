@@ -7,6 +7,8 @@ import {
 import Navbar from './components/common/Navbar'
 import './App.css';
 import Menu from './components/menu';
+import AboutUs from './components/menu/AboutUs';
+import Edit from './components/menu/Edit'
 {
 {/* <img src={logo} className="App-logo" alt="logo" />
         <Message messageObject  = {messageObject}/>
@@ -36,11 +38,10 @@ function App() {
             <p>This is where restaurant owners will be 
               able to edit their menus.
             </p>
+            <Edit />
           </Route>
           <Route path="/aboutUs">
-            <h1>
-              this will hopefully be where i put the about us page.
-            </h1>
+            <AboutUs />
           </Route>
           <Route exact path="/">
             <h1>Welcome to Our Website!</h1>

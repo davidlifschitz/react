@@ -6,7 +6,7 @@ function Item(props) {
         <div className="menu-item">
 
             <h3>{item.name}</h3>
-            <p>{item.price}</p>
+            <p>{Number(item.price).toFixed(2)}</p>
 
         </div>
 
