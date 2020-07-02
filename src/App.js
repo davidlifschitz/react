@@ -9,6 +9,7 @@ import './App.css';
 import Menu from './components/menu';
 import AboutUs from './components/menu/AboutUs';
 import Edit from './components/menu/Edit'
+import Counter from './components/common/Counter'
 {
 {/* <img src={logo} className="App-logo" alt="logo" />
         <Message messageObject  = {messageObject}/>
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <h1>Welcome to Our Website!</h1>
+          </Route>
+          <Route path= "/counter"> 
+          <Counter />
           </Route>
         </Switch>
       </div>
