@@ -9,7 +9,9 @@ function Navbar()
             <li><NavLink to="/menu">Menu</NavLink></li>
             <li><NavLink to="/edit">Edit</NavLink></li>
             {/* <li><NavLink to="/aboutUs">About Us</NavLink></li> */}
-            <li><NavLink to="/Counter">Counter</NavLink></li>
+            <li><NavLink to="/counter">Counter</NavLink></li>
+            <li><NavLink to="/login">Login</NavLink></li>
+            <li><NavLink to="/signup">Sign Up</NavLink></li>
         </ul>
     )
 }

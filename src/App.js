@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { useState,createContext } from 'react';
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom"
 import * as firebase from 'firebase'
 import Navbar from './components/common/Navbar'
@@ -7,6 +7,7 @@ import Counter from './components/common/Counter'
 import Edit from './components/menu/Edit'
 import Join from './components/common/Join'
 import Login from './components/common/Login'
+import configFirebase from './config'
 // import AboutUs from './components/menu/AboutUs';
 import './App.css';
 
@@ -26,37 +27,37 @@ import './App.css';
   * messageObject.message = "this is text"  
   * console.log(messageObject)
   */  
-function App() {
+ firebase.initializeApp(configFirebase)
+
+ export const AuthContext = createContext(null)
+  function App() {
+    const [isLoggedIn, setLoggedIn] = useState(false)
+  const [userName, setUserName] = useState(null)
   return (
+
     <Router>
       <div className="App">
+        <AuthContext.Provider value={{isLoggedIn,setLoggedIn,userName,setUserName}}>
         <Navbar />
         <Switch>
-          <Route path="/menu">
-            <Menu />
+        <Route exact path="/">
+            <h1>Welcome to Our Website!</h1>
           </Route>
+          <Route path="/menu" component = {Menu}/>
+          <Route path= "/counter" component = {Counter} /> 
           <Route path="/edit">
-            <p>This is where restaurant owners will be 
-              able to edit their menus.
-            </p>
-            <Edit />
+            {isLoggedIn
+            ? <Edit />
+            : <Login/>
+            }
           </Route>
           {/* <Route path="/aboutUs">
             <AboutUs />
           </Route> */}
-          <Route exact path="/">
-            <h1>Welcome to Our Website!</h1>
-          </Route>
-          <Route path= "/counter"> 
-          <Counter />
-          </Route>
-          <Route path="/Join">
-            <Menu />
-          </Route>
-          <Route path="/menu">
-            <Menu />
-          </Route>
+          <Route path="/login" component = {Login} />
+          <Route path="/Join" component = {Join}/>
         </Switch>
+        </AuthContext.Provider>        
       </div>
     </Router>
   );
