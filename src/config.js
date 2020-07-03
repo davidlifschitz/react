@@ -1,4 +1,4 @@
-const firebaseConfig = {
+const configFirebase = {
     apiKey: "AIzaSyAYg3ZCCRAkELxJV4i57gLR4IHgVyDZ91I",
     authDomain: "react-project1-795e0.firebaseapp.com",
     databaseURL: "https://react-project1-795e0.firebaseio.com",

@@ -1,10 +1,10 @@
-import React, {useState, Fragment, useEffect, useLayoutEffect} from 'react'
+import React, {useState, Fragment} from 'react'
 
 function Counter()
 {
     var [count, setCount] = useState(0)
-    var [input, setInput] = useState('')
-    var [previous, setPrevious] = useState()
+    //var [input, setInput] = useState('')
+    //var [previous, setPrevious] = useState()
     
     return (
         <Fragment>
@@ -17,7 +17,9 @@ function Counter()
         <button onClick={() => setCount(count - 1)}>Subtract</button>
         <button onClick={() => setCount(count - 1)}>Subtract</button>
         <p>The current count is {count}</p>
-        <h1>please input your name here</h1>
+        
+        
+        {/* <h1>please input your name here</h1>
         <input type="text" value={input} onChange={(event) => setInput(event.target.value)}></input>
         <h1>{input}</h1>
         <button onClick={() => setInput("")}>AC</button>
@@ -29,7 +31,7 @@ function Counter()
         <button onClick={() => setInput(input+"6")}>6</button>
         <button onClick={() => setInput(input+"7")}>7</button>
         <button onClick={() => setInput(input+"8")}>8</button>
-        <button onClick={() => setInput(input+"9")}>9</button>
+        <button onClick={() => setInput(input+"9")}>9</button> */}
         
 
         </Fragment>
